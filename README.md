@@ -160,15 +160,6 @@ jobs:
 <details>
 
 
----------
-
-<p align="center">
-  <a href="https://wa.me/+263776388689?text=*ʜɪɪ+ᴍᴀʟᴠɪɴ--+ɪ+ɴᴇᴇᴅ+ʜᴇʟᴘ!.+ɪ+ᴍᴇssᴀɢᴇᴅ+ʏᴏᴜ+ғʀᴏᴍ+ᴍᴀʟᴠɪɴ-xᴍᴅ+ʀᴇᴘᴏ!!*" target="_blank">
-    <img alt="whatsapp" src="https://img.shields.io/badge/ Whatsapp -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-
-
-<a><img src='https://i.imgur.com/LyHic3i.gif'/> 
-
 
 ---------
 
