@@ -1,14 +1,4 @@
 
-/*
-Project Name : MALVIN XMD
-Creator      : Malvin King ( Mr Lord Malvin )
-Repo         : https//github.com/kingmalvn/MALVIN-XMD
-Support      : wa.me/263714757857
-*/
-
-
-
-
 const config = require('../config');
 const { cmd, commands } = require('../command');
 const { runtime } = require('../lib/functions');
@@ -52,14 +42,37 @@ async (conn, mek, m, { from, quoted, reply }) => {
 ┇๏ *Public Mode:* ${isEnabled(config.PUBLIC_MODE) ? "Enabled ✅" : "Disabled ❌"}
 ┇๏ *Read Message:* ${isEnabled(config.READ_MESSAGE) ? "Enabled ✅" : "Disabled ❌"}
 ╰━━━━━━━━━━━━──┈⊷
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʟᴏʀᴅ ᴍaʟᴠɪɴ
-`
+> ${config.DESCRIPTION}`;
 
+        // Send message with an image
+        await conn.sendMessage(
+            from,
+            {
+                image: { url: 'https://files.catbox.moe/7pg2gp.jpg' }, // Image URL
+                caption: envSettings,
+                contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363306168354073@newsletter',
+                        newsletterName: "Mʀ-Mᴀʟᴠɪɴ",
+                        serverMessageId: 143
+                    }
+                }
+            },
+            { quoted: mek }
+        );
 
-await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:envSetting},{quoted:mek})
+        // Send an audio file
+        await conn.sendMessage(from, {
+            audio: { url: 'https://github.com/kingmalvn/malvin-database/raw/refs/heads/main/Media/menu.mp3' }, // Audio URL
+            mimetype: 'audio/mp4',
+            ptt: true
+        }, { quoted: mek });
 
-}catch(e){
-console.log(e)
-reply(`${e}`)
-}
-})
+    } catch (error) {
+        console.log(error);
+        reply(`Error: ${error.message}`);
+    }
+});
